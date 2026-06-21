@@ -1,5 +1,5 @@
 /* ===========================================================
-   B-SAR / SAR TRACKMASTERS — design tokens
+   B-SAR — design tokens
    =========================================================== */
 :root {
   --color-black: #0c0d0d;
@@ -8,7 +8,6 @@
   --color-bone: #e9e5d8;
   --color-bone-dim: #aba896;
   --color-yellow: #f2b705;
-  --color-red: #c8102e;
   --color-steel: #3a3f42;
   --color-steel-light: #565d61;
 
