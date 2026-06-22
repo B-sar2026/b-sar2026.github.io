@@ -14,19 +14,23 @@
 <header class="site-header">
   <div class="nav-bar">
     <a href="index.html" class="brand">
-      <span class="brand-mark"><span>B</span></span>
-      <span>
-        B-SAR
-        <small>Reddingshonden K9</small>
+      <img src="assets/images/B-SARLOGO-KLEUR.png" alt="B-SAR Logo" class="brand-logo">
+      <span class="brand-text">
+        <span class="brand-title">B-SAR</span>
+        <span class="brand-sub">Search and Rescue Dogs Belgium</span>
       </span>
     </a>
     <nav class="main-nav">
       <a href="index.html">Home</a>
-      <a href="index.html#missie">Missie</a>
-      <a href="index.html#vrijwilliger">Vrijwilliger worden</a>
       <a href="teams.html" class="active">Teams</a>
+      <a href="fotos.html">Foto's</a>
+      <a href="evenementen.html">Evenementen</a>
       <a href="sponsors.html">Sponsors</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu openen">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
@@ -37,8 +41,9 @@
       <span class="eyebrow">Onze teams</span>
       <h1>7 honden, 7 geleiders, één missie</h1>
       <p>
-        Elk team binnen B-SAR bestaat uit een hond en een vaste geleider die
-        samen trainen en zich samen klaarstomen voor inzet.
+        Elk team binnen B-SAR bestaat uit een hond en een vaste geleider.
+        Onze geleiders en honden brengen ervaring mee vanuit andere organisaties
+        en trainen samen om als nieuwe eenheid operationeel klaar te zijn.
       </p>
     </div>
   </section>
@@ -52,7 +57,6 @@
       <div class="roster-grid">
 
         <div class="roster-card">
-          <span class="roster-tag">Team 01</span>
           <div class="roster-photo"><img src="assets/images/placeholder.png" alt="Foto van Aïko"></div>
           <h3>Aïko</h3>
           <div class="breed">Mini Labradoodle</div>
@@ -60,7 +64,6 @@
         </div>
 
         <div class="roster-card">
-          <span class="roster-tag">Team 02</span>
           <div class="roster-photo"><img src="assets/images/placeholder.png" alt="Foto van Blake"></div>
           <h3>Blake</h3>
           <div class="breed">Cane Corso</div>
@@ -68,7 +71,6 @@
         </div>
 
         <div class="roster-card">
-          <span class="roster-tag">Team 03</span>
           <div class="roster-photo"><img src="assets/images/placeholder.png" alt="Foto van Lou"></div>
           <h3>Lou</h3>
           <div class="breed">Cane Corso</div>
@@ -76,7 +78,6 @@
         </div>
 
         <div class="roster-card">
-          <span class="roster-tag">Team 04</span>
           <div class="roster-photo"><img src="assets/images/placeholder.png" alt="Foto van Louise"></div>
           <h3>Louise</h3>
           <div class="breed">Labrador</div>
@@ -84,7 +85,6 @@
         </div>
 
         <div class="roster-card">
-          <span class="roster-tag">Team 05</span>
           <div class="roster-photo"><img src="assets/images/placeholder.png" alt="Foto van Mickey"></div>
           <h3>Mickey</h3>
           <div class="breed">Border Collie</div>
@@ -92,7 +92,6 @@
         </div>
 
         <div class="roster-card">
-          <span class="roster-tag">Team 06</span>
           <div class="roster-photo"><img src="assets/images/placeholder.png" alt="Foto van Olly"></div>
           <h3>Olly</h3>
           <div class="breed">Border Collie</div>
@@ -100,7 +99,6 @@
         </div>
 
         <div class="roster-card">
-          <span class="roster-tag">Team 07</span>
           <div class="roster-photo"><img src="assets/images/placeholder.png" alt="Foto van Xelo"></div>
           <h3>Xelo</h3>
           <div class="breed">Duitse Herder</div>
@@ -144,7 +142,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-grid">
-      <div>B-SAR<br>Search &amp; Rescue K9 — België</div>
+      <div>B-SAR<br>Search and Rescue Dogs Belgium</div>
       <div>
         <a href="mailto:bsar.reddingshonden@outlook.com">bsar.reddingshonden@outlook.com</a><br>
         <a href="index.html">Terug naar home</a>
@@ -157,5 +155,19 @@
   </div>
 </footer>
 
+<script>
+const toggle = document.getElementById('navToggle');
+const nav = document.querySelector('nav.main-nav');
+toggle.addEventListener('click', () => {
+  toggle.classList.toggle('open');
+  nav.classList.toggle('open');
+});
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('header')) {
+    toggle.classList.remove('open');
+    nav.classList.remove('open');
+  }
+});
+</script>
 </body>
 </html>

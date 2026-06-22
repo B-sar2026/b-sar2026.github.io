@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>B-SAR — Search &amp; Rescue Speurhonden België</title>
-<meta name="description" content="B-SAR is een Belgisch vrijwilligersorganisatie van gecertificeerde speurhondenteams, inzetbaar voor de opsporing van vermiste personen in Vlaanderen en België. Reddingshonden K9, vrijwilliger worden, sponsors.">
+<meta name="description" content="B-SAR is een Belgisch vrijwilligersorganisatie van gecertificeerde speurhondenteams, inzetbaar voor de opsporing van vermiste personen in Vlaanderen en België. Search and Rescue Dogs Belgium, vrijwilliger worden, sponsors.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
@@ -14,20 +14,23 @@
 <header class="site-header">
   <div class="nav-bar">
     <a href="index.html" class="brand">
-      <span class="brand-mark"><span>B</span></span>
-      <span>
-        B-SAR
-        <small>Reddingshonden K9</small>
+      <img src="assets/images/B-SARLOGO-KLEUR.png" alt="B-SAR Logo" class="brand-logo">
+      <span class="brand-text">
+        <span class="brand-title">B-SAR</span>
+        <span class="brand-sub">Search and Rescue Dogs Belgium</span>
       </span>
     </a>
-    <nav class="main-nav">
+        <nav class="main-nav">
       <a href="index.html" class="active">Home</a>
-      <a href="#missie">Missie</a>
-      <a href="#vrijwilliger">Vrijwilliger worden</a>
       <a href="teams.html">Teams</a>
+      <a href="fotos.html">Foto's</a>
+      <a href="evenementen.html">Evenementen</a>
       <a href="sponsors.html">Sponsors</a>
       <a href="#contact">Contact</a>
     </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu openen">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
@@ -35,29 +38,55 @@
 
   <section class="hero">
     <div class="wrap hero-inner">
-      <span class="eyebrow">Search &amp; Rescue K9 — België</span>
-      <h1>Inzetbaar.<br><span class="accent">Altijd paraat.</span></h1>
-      <p class="lead">
-        B-SAR traint en zet speurhondenteams in voor de opsporing
-        van vermiste personen. Vrijwillig, professioneel opgeleid en
-        operationeel klaar wanneer het telt.
-      </p>
-      <div class="cta-row">
-        <a href="#vrijwilliger" class="btn btn-primary">Word vrijwilliger</a>
-        <a href="sponsors.html" class="btn btn-outline">Steun ons als sponsor</a>
-      </div>
-      <div class="status-strip">
-        <div class="status-item">
-          <span class="label">Regio</span>
-          <span class="value">Vlaanderen / België</span>
+      <div class="hero-layout">
+        <div class="hero-text">
+          <span class="eyebrow">Search and Rescue Dogs Belgium</span>
+          <h1>Inzetbaar.<br><span class="accent">Altijd paraat.</span></h1>
+          <p class="lead">
+            B-SAR traint en zet speurhondenteams in voor de opsporing
+            van vermiste personen. Vrijwillig, professioneel opgeleid en
+            operationeel klaar wanneer het telt.
+          </p>
+          <div class="cta-row">
+            <div class="btn-contact-wrap">
+              <button class="btn btn-contact" onclick="this.parentElement.classList.toggle('open')">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="white" style="vertical-align:middle;margin-right:0.5em"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+                Vermissing melden
+              </button>
+              <div class="contact-dropdown">
+                <p class="contact-label">Bel ons direct bij een vermissing</p>
+                <a href="tel:+32XXXXXXXXX" class="contact-number">
+                  <span class="contact-name">[ Naam 1 ]</span>
+                  <span class="contact-tel">+32 XXX XX XX XX</span>
+                </a>
+                <a href="tel:+32XXXXXXXXX" class="contact-number">
+                  <span class="contact-name">[ Naam 2 ]</span>
+                  <span class="contact-tel">+32 XXX XX XX XX</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="cta-row">
+            <a href="#vrijwilliger" class="btn btn-outline">Word vrijwilliger</a>
+            <a href="sponsors.html" class="btn btn-outline">Steun ons als sponsor</a>
+          </div>
+          <div class="status-strip">
+            <div class="status-item">
+              <span class="label">Regio</span>
+              <span class="value">Vlaanderen / België</span>
+            </div>
+            <div class="status-item">
+              <span class="label">Eenheid</span>
+              <span class="value">K9 Speurhondenteam</span>
+            </div>
+            <div class="status-item">
+              <span class="label">Status</span>
+              <span class="value live">Operationeel</span>
+            </div>
+          </div>
         </div>
-        <div class="status-item">
-          <span class="label">Eenheid</span>
-          <span class="value">K9 Speurhondenteam</span>
-        </div>
-        <div class="status-item">
-          <span class="label">Status</span>
-          <span class="value live">Operationeel</span>
+        <div class="hero-logo">
+          <img src="assets/images/B-SARLOGO-KLEUR.png" alt="B-SAR Logo">
         </div>
       </div>
     </div>
@@ -69,9 +98,10 @@
         <span class="eyebrow">Onze missie</span>
         <h2>Elke minuut telt.</h2>
         <p>
-          Ons team combineert gecertificeerde speurhonden met getrainde
-          geleiders om snel en doeltreffend in te zetten bij
-          zoekacties — in samenwerking met hulpdiensten en lokale autoriteiten.
+          B-SAR is in juni 2026 opgericht door een groep ervaren speurhondengeleiders.
+          Onze honden en geleiders brengen ervaring mee vanuit andere organisaties
+          en trainen samen om als eenheid inzetbaar te zijn bij zoekacties
+          in samenwerking met hulpdiensten en lokale autoriteiten.
         </p>
       </div>
       <div class="stat-grid">
@@ -80,12 +110,12 @@
           <div class="label">Opgericht</div>
         </div>
         <div class="stat-card">
-          <div class="num">[ N ]</div>
-          <div class="label">Actieve teams</div>
+          <div class="num">7</div>
+          <div class="label">Actieve K9-teams</div>
         </div>
         <div class="stat-card">
-          <div class="num">[ N ]</div>
-          <div class="label">Inzetten tot nu toe</div>
+          <div class="num">In opleiding</div>
+          <div class="label">Klaar voor eerste inzet</div>
         </div>
       </div>
     </div>
@@ -101,23 +131,23 @@
       <div class="step-grid">
         <div class="step-card">
           <span class="step-num">01</span>
-          <h3>Aanmelden</h3>
-          <p>Vul het contactformulier in en maak kennis met het team tijdens een infomoment.</p>
+          <h3>Contact</h3>
+          <p>Neem contact op via mail of telefoon. We beantwoorden al je vragen en vertellen je meer over wat B-SAR doet.</p>
         </div>
         <div class="step-card">
           <span class="step-num">02</span>
-          <h3>Basisopleiding</h3>
-          <p>Theorie en praktijk: terreinkennis, EHBO, en de fundamenten van speurhondenwerk.</p>
+          <h3>Kijkmoment</h3>
+          <p>Kom eens vrijblijvend meekijken tijdens een training. Zo krijg je een eerlijk beeld van hoe we werken en wat er van je verwacht wordt.</p>
         </div>
         <div class="step-card">
           <span class="step-num">03</span>
-          <h3>Certificering</h3>
-          <p>Geleider en hond worden samen getest en gecertificeerd volgens de teamstandaard.</p>
+          <h3>Trainen</h3>
+          <p>Je start het traject als geleider. Jij en je hond trainen samen en bouwen stap voor stap de vaardigheden op die nodig zijn voor inzet.</p>
         </div>
         <div class="step-card">
           <span class="step-num">04</span>
           <h3>Inzetbaar</h3>
-          <p>Je maakt deel uit van de oproeplijst voor echte zoekacties en periodieke training.</p>
+          <p>Je maakt deel uit van de oproeplijst voor echte zoekacties en blijft trainen om operationeel scherp te blijven.</p>
         </div>
       </div>
     </div>
@@ -156,7 +186,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-grid">
-      <div>B-SAR<br>Search &amp; Rescue K9 — België</div>
+      <div>B-SAR<br>Search and Rescue Dogs Belgium</div>
       <div>
         <a href="mailto:bsar.reddingshonden@outlook.com">bsar.reddingshonden@outlook.com</a><br>
         <a href="sponsors.html">Word sponsor</a>
@@ -169,5 +199,19 @@
   </div>
 </footer>
 
+<script>
+const toggle = document.getElementById('navToggle');
+const nav = document.querySelector('nav.main-nav');
+toggle.addEventListener('click', () => {
+  toggle.classList.toggle('open');
+  nav.classList.toggle('open');
+});
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('header')) {
+    toggle.classList.remove('open');
+    nav.classList.remove('open');
+  }
+});
+</script>
 </body>
 </html>
