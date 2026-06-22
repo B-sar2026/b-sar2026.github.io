@@ -28,6 +28,9 @@
       <a href="sponsors.html">Sponsors</a>
       <a href="#contact">Contact</a>
     </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu openen">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
@@ -196,5 +199,19 @@
   </div>
 </footer>
 
+<script>
+const toggle = document.getElementById('navToggle');
+const nav = document.querySelector('nav.main-nav');
+toggle.addEventListener('click', () => {
+  toggle.classList.toggle('open');
+  nav.classList.toggle('open');
+});
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('header')) {
+    toggle.classList.remove('open');
+    nav.classList.remove('open');
+  }
+});
+</script>
 </body>
 </html>
