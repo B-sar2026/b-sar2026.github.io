@@ -813,3 +813,30 @@ footer.site-footer {
   color: var(--color-yellow);
   margin-right: 0.6em;
 }
+
+/* contact numbers in cta-band */
+.cta-numbers {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.2rem;
+}
+.cta-number-item {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-mono);
+}
+.cta-number-item .cta-num-name {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-bone-dim);
+  margin-bottom: 0.2rem;
+}
+.cta-number-item a {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-red);
+  text-decoration: none;
+}
+.cta-number-item a:hover { text-decoration: underline; }
