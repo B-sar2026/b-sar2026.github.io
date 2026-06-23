@@ -795,3 +795,21 @@ footer.site-footer {
   .btn { transition: none; }
   .nav-toggle span { transition: none; }
 }
+
+/* ===========================================================
+   BETA BANNER
+   =========================================================== */
+.beta-banner {
+  background: #1a1a1a;
+  color: #e9e5d8;
+  text-align: center;
+  padding: 0.55rem 1.2rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.beta-banner span {
+  color: var(--color-yellow);
+  margin-right: 0.6em;
+}
