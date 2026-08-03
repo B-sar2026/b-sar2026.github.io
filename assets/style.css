@@ -18,7 +18,7 @@
 
   --radius: 2px;
   --gap-section: 7rem;
-  --content-width: 1120px;
+  --content-width: 1280px;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -100,7 +100,7 @@ header.site-header {
 }
 
 .brand-logo {
-  height: 90px;
+  height: 72px;
   width: auto;
   display: block;
 }
@@ -140,10 +140,10 @@ header.site-header {
 
 nav.main-nav {
   display: flex;
-  gap: 2rem;
+  gap: 1.4rem;
   font-family: var(--font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
@@ -463,7 +463,7 @@ section:last-of-type { border-bottom: none; }
 /* team roster */
 .roster-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1px;
   background: var(--color-steel);
   border: 1px solid var(--color-steel);
@@ -480,7 +480,7 @@ section:last-of-type { border-bottom: none; }
   color: var(--color-yellow);
 }
 .roster-photo {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 5;
   background: var(--color-panel);
   border: 1px solid var(--color-steel);
   border-radius: var(--radius);
@@ -493,8 +493,8 @@ section:last-of-type { border-bottom: none; }
 .roster-photo img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  padding: 12%;
+  object-fit: cover;
+  padding: 0;
   box-sizing: border-box;
 }
 .roster-card h3 {
