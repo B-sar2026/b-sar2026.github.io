@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inzetten - B-SAR Search and Rescue Dogs Belgium</title>
+<meta name="description" content="Overzicht van inzetten waarbij B-SAR Search and Rescue Dogs Belgium betrokken was bij de opsporing van vermiste personen in Belgie.">
+<link rel="icon" type="image/x-icon" href="assets/favicoon/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="assets/favicoon/favicon.svg">
+<link rel="icon" type="image/png" sizes="96x96" href="assets/favicoon/favicon-96x96.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicoon/apple-touch-icon.png">
+<link rel="manifest" href="assets/favicoon/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://b-sar.be/inzetten.html">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .inzet-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--color-steel);
+    border: 1px solid var(--color-steel);
+  }
+  .inzet-card {
+    background: var(--color-charcoal);
+    padding: 2rem 2.2rem;
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+  .inzet-date {
+    text-align: center;
+    padding-top: 0.3rem;
+  }
+  .inzet-date .day {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-bone);
+    line-height: 1;
+  }
+  .inzet-date .month {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-yellow);
+    margin-top: 0.3rem;
+    display: block;
+  }
+  .inzet-date .year {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+    color: var(--color-steel-light);
+    display: block;
+  }
+  .inzet-body h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+  }
+  .inzet-meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+  .inzet-tag {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.7rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--color-steel);
+    color: var(--color-bone-dim);
+  }
+  .inzet-tag.lopend { border-color: var(--color-red); color: var(--color-red); }
+  .inzet-tag.afgerond { border-color: var(--color-steel-light); color: var(--color-steel-light); }
+  .inzet-body p {
+    color: var(--color-bone-dim);
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  .inzet-partners {
+    margin-top: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    color: var(--color-steel-light);
+  }
+  .inzet-partners span { color: var(--color-bone-dim); }
+  @media (max-width: 640px) {
+    .inzet-card { grid-template-columns: 1fr; gap: 0.8rem; }
+    .inzet-date { text-align: left; display: flex; gap: 0.8rem; align-items: baseline; }
+    .inzet-date .month, .inzet-date .year { display: inline; margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="beta-banner"><span>⚠</span>Deze website is nog in opbouw - inhoud en lay-out kunnen nog wijzigen.</div>
+
+<header class="site-header">
+  <div class="nav-bar">
+    <a href="index.html" class="brand">
+      <img src="assets/images/B-SARLOGO-KLEUR.png" alt="B-SAR Search and Rescue Dogs Belgium - logo navigatie" class="brand-logo">
+      <span class="brand-text">
+        <span class="brand-title">B-SAR</span>
+        <span class="brand-sub">Search and Rescue Dogs Belgium</span>
+      </span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="over-ons.html">Over ons</a>
+      <a href="teams.html">Teams</a>
+      <a href="samenwerkingen.html">Samenwerkingen</a>
+      <a href="fotos.html">Foto's</a>
+      <a href="inzetten.html" class="active">Inzetten</a>
+      <a href="sponsors.html">Sponsors</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu openen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-header">
+    <div class="wrap">
+      <span class="eyebrow">Inzetten</span>
+      <h1>Op het terrein wanneer het telt</h1>
+      <p>Een overzicht van inzetten waarbij B-SAR betrokken was. Omwille van lopende onderzoeken en privacy worden namen en exacte locaties niet vermeld.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="inzet-list">
+
+        <div class="inzet-card">
+          <div class="inzet-date">
+            <div class="day">26</div>
+            <span class="month">Juli</span>
+            <span class="year">2026</span>
+          </div>
+          <div class="inzet-body">
+            <h3>Zoekactie naar vermiste persoon - Ardennen</h3>
+            <div class="inzet-meta">
+              <span class="inzet-tag">Ardennen</span>
+              <span class="inzet-tag lopend">Persoon niet gevonden</span>
+            </div>
+            <p>
+              B-SAR nam deel aan een grootschalige zoekactie in de Ardennen naar een vermiste persoon. Onze leden gingen mee zonder honden om te observeren, leren en te begrijpen wat een echte inzet inhoudt - welke beslissingen er worden genomen, hoe teams worden ingedeeld en welke omstandigheden op training nagebootst moeten worden.
+            </p>
+            <p>
+              Spijtig genoeg werd de vermiste persoon niet gevonden. Omwille van het lopende onderzoek kunnen geen namen of verdere locatiedetails worden gedeeld.
+            </p>
+            <p style="margin-top:1rem; font-style:italic; color:var(--color-bone-dim);">
+              We zijn enorm dankbaar dat we mee mochten lopen tijdens deze inzet. Het was een ongelooflijk leerrijke ervaring die ons veel heeft bijgebracht over hoe een echte zoekactie verloopt en waar we in onze trainingen op moeten werken. We kijken zeker uit naar een verdere samenwerking.
+            </p>
+            <div class="inzet-partners">
+              Samen met: <span>De Vlaamse Reddingshonden, Reddingshonden Team Zeeland, Delta Reddingshonden Groep, SRO</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="cta-band">
+        <div class="cta-band-left">
+          <h2>Contact</h2>
+          <div class="cta-numbers">
+            <div class="cta-number-item">
+              <span class="cta-num-name">Didier</span>
+              <a href="tel:+32472543208">+32 472 54 32 08</a>
+            </div>
+            <div class="cta-number-item">
+              <span class="cta-num-name">Freddy</span>
+              <a href="tel:+32475665372">+32 475 66 53 72</a>
+            </div>
+          </div>
+        </div>
+        <a href="mailto:bsar.reddingshonden@outlook.com" class="btn btn-primary">Stuur ons een bericht</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>B-SAR<br>Search and Rescue Dogs Belgium</div>
+      <div>
+        <a href="mailto:bsar.reddingshonden@outlook.com">bsar.reddingshonden@outlook.com</a><br>
+        <a href="index.html">Terug naar home</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 B-SAR</span>
+      <span>Gevestigd in België</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const toggle = document.getElementById('navToggle');
+const nav = document.querySelector('nav.main-nav');
+toggle.addEventListener('click', () => {
+  toggle.classList.toggle('open');
+  nav.classList.toggle('open');
+});
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('header')) {
+    toggle.classList.remove('open');
+    nav.classList.remove('open');
+  }
+});
+</script>
+
+</body>
+</html>
