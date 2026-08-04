@@ -413,7 +413,7 @@ section:last-of-type { border-bottom: none; }
   margin-top: 0.5rem;
 }
 
-/* process steps (legitimate sequence) */
+/* process steps */
 .step-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -437,7 +437,7 @@ section:last-of-type { border-bottom: none; }
 }
 .step-card p { color: var(--color-bone-dim); font-size: 0.92rem; }
 
-/* sponsor logo grid (teaser + full page) */
+/* sponsor logo grid */
 .logo-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -461,11 +461,11 @@ section:last-of-type { border-bottom: none; }
 }
 
 /* ===========================================================
-   TEAM ROSTER (Hersteld naar Origineel - 3 kolommen desktop)
+   TEAM ROSTER (3 kolommen desktop)
    =========================================================== */
 .roster-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Aangepast naar 3 kolommen zoals in je afbeelding */
+  grid-template-columns: repeat(3, 1fr);
   gap: 1px;
   background: var(--color-steel);
   border: 1px solid var(--color-steel);
@@ -482,10 +482,10 @@ section:last-of-type { border-bottom: none; }
   color: var(--color-yellow);
 }
 .roster-photo {
-  aspect-ratio: 4 / 5;                   /* Teruggezet naar de originele rechthoekige verhouding */
+  aspect-ratio: 4 / 5;
   background: var(--color-panel);
   border: 1px solid var(--color-steel);
-  border-radius: var(--radius);          /* Geen cirkels meer, gewoon de originele strakke hoeken */
+  border-radius: var(--radius);
   margin: 0.8rem 0 1rem;
   display: flex;
   align-items: center;
@@ -525,7 +525,9 @@ section:last-of-type { border-bottom: none; }
   margin-bottom: 0.2rem;
 }
 
-/* support team */
+/* ===========================================================
+   SUPPORT TEAM
+   =========================================================== */
 .support-list {
   border: 1px solid var(--color-steel);
   border-radius: var(--radius);
@@ -533,14 +535,15 @@ section:last-of-type { border-bottom: none; }
 .support-item {
   display: flex;
   align-items: center;
-  gap: 1.2rem;
-  padding: 1.3rem 1.6rem;
+  gap: 2rem;
+  padding: 1.8rem 2rem;
   border-bottom: 1px solid var(--color-steel);
+  background: #ffffff;
 }
 .support-item:last-child { border-bottom: none; }
 .support-item .support-photo {
-  width: 56px;
-  height: 56px;
+  width: 170px;
+  height: 170px;
   flex-shrink: 0;
   background: var(--color-panel);
   border: 1px solid var(--color-steel);
@@ -553,22 +556,99 @@ section:last-of-type { border-bottom: none; }
 .support-item .support-photo img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  padding: 12%;
+  object-fit: cover;
+  padding: 0;
   box-sizing: border-box;
 }
 .support-item h3 {
-  font-size: 1.05rem;
-  text-transform: none;
-  letter-spacing: 0;
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
 }
 .support-item p {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-bone-dim);
-  margin-top: 0.2rem;
+}
+
+/* ===========================================================
+   SLIDER (fotos.html)
+   =========================================================== */
+.slider-container {
+  position: relative;
+  max-width: 1100px; /* Groter gemaakt voor betere zichtbaarheid */
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid var(--color-steel);
+  border-radius: var(--radius);
+  background: var(--color-panel);
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.slide {
+  min-width: 100%;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(26, 26, 26, 0.7);
+  color: #fff;
+  border: 1px solid var(--color-steel);
+  font-size: 1.5rem;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s, color 0.2s;
+  user-select: none;
+}
+
+.slider-btn:hover {
+  background: var(--color-red);
+  color: #fff;
+}
+
+.slider-btn.prev { left: 10px; }
+.slider-btn.next { right: 10px; }
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-steel);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dot.active {
+  background: var(--color-red);
 }
 
 /* sponsor tiers */
@@ -643,7 +723,7 @@ footer.site-footer {
 }
 
 /* ===========================================================
-   PAGE HEADER (for sub-pages like sponsors.html)
+   PAGE HEADER
    =========================================================== */
 .page-header {
   padding: 4.5rem 0 3rem;
@@ -681,7 +761,6 @@ footer.site-footer {
    =========================================================== */
 @media (max-width: 640px) {
 
-  /* Nav - hamburger */
   nav.main-nav {
     display: none;
     flex-direction: column;
@@ -732,13 +811,11 @@ footer.site-footer {
 
   header.site-header { position: relative; }
 
-  /* Brand - smaller on mobile */
   .brand-logo { height: 48px; }
   .brand-title { font-size: 1rem; }
   .brand-sub { display: none; }
   .nav-bar { padding: 0.8rem 1.2rem; }
 
-  /* Hero */
   .hero { padding: 2.5rem 0 3rem; }
   .hero-layout {
     grid-template-columns: 1fr;
@@ -753,7 +830,6 @@ footer.site-footer {
   .btn-contact { width: 100%; }
   .btn { text-align: center; }
 
-  /* Status strip */
   .status-strip {
     flex-direction: column;
     width: 100%;
@@ -761,18 +837,15 @@ footer.site-footer {
   .status-item { border-right: none; border-bottom: 1px solid var(--color-steel); }
   .status-item:last-child { border-bottom: none; }
 
-  /* Sections */
   section { padding: 3rem 0; }
   .section-head { margin-bottom: 2rem; }
 
-  /* Grids */
   .step-grid,
   .tier-grid,
   .logo-grid,
   .roster-grid { grid-template-columns: 1fr; }
   .stat-grid { grid-template-columns: 1fr; }
 
-  /* CTA band */
   .cta-band {
     flex-direction: column;
     align-items: flex-start;
@@ -780,16 +853,12 @@ footer.site-footer {
   }
   .cta-band h2 { font-size: 1.3rem; }
 
-  /* Page header */
   .page-header { padding: 2.5rem 0 2rem; }
 
-  /* Support item */
-  .support-photo { width: 48px; height: 48px; }
+  .support-item .support-photo { width: 120px; height: 120px; }
 
-  /* Contact dropdown */
   .contact-dropdown { min-width: 100%; left: 0; right: 0; }
 
-  /* Wrap padding */
   .wrap { padding: 0 1.1rem; }
 }
 
@@ -800,7 +869,7 @@ footer.site-footer {
 }
 
 /* ===========================================================
-   BETA BANNER
+   BETA BANNER & CTA NUMBERS
    =========================================================== */
 .beta-banner {
   background: #1a1a1a;
@@ -817,7 +886,6 @@ footer.site-footer {
   margin-right: 0.6em;
 }
 
-/* contact numbers in cta-band */
 .cta-numbers {
   display: flex;
   gap: 1.5rem;
