@@ -14,37 +14,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="canonical" href="https://b-sar.be/fotos.html">
 <link rel="stylesheet" href="assets/style.css">
-<style>
-  .photo-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--color-steel);
-    border: 1px solid var(--color-steel);
-  }
-  .photo-slot {
-    aspect-ratio: 4 / 3;
-    background: var(--color-charcoal);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--color-steel-light);
-    overflow: hidden;
-  }
-  .photo-slot img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  @media (max-width: 640px) {
-    .photo-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-</style>
 </head>
 <body>
 
@@ -52,13 +21,13 @@
 <header class="site-header">
   <div class="nav-bar">
     <a href="index.html" class="brand">
-      <img src="assets/images/B-SARLOGO-KLEUR.png" alt="B-SAR Search and Rescue Dogs Belgium - logo navigatie" class="brand-logo">
+      <img src="assets/Logo/B-SARLOGO-KLEUR.png" alt="B-SAR Search and Rescue Dogs Belgium - logo navigatie" class="brand-logo">
       <span class="brand-text">
         <span class="brand-title">B-SAR</span>
         <span class="brand-sub">Search and Rescue Dogs Belgium</span>
       </span>
     </a>
-        <nav class="main-nav">
+    <nav class="main-nav">
       <a href="index.html">Home</a>
       <a href="over-ons.html">Over ons</a>
       <a href="teams.html">Teams</a>
@@ -86,17 +55,34 @@
 
   <section>
     <div class="wrap">
-      <div class="photo-grid">
-        <div class="photo-slot">Foto 1</div>
-        <div class="photo-slot">Foto 2</div>
-        <div class="photo-slot">Foto 3</div>
-        <div class="photo-slot">Foto 4</div>
-        <div class="photo-slot">Foto 5</div>
-        <div class="photo-slot">Foto 6</div>
-        <div class="photo-slot">Foto 7</div>
-        <div class="photo-slot">Foto 8</div>
-        <div class="photo-slot">Foto 9</div>
+      
+      <div class="slider-container">
+        <!-- Navigatiepijltjes -->
+        <button class="slider-btn prev" id="prevBtn" aria-label="Vorige foto">&#10094;</button>
+        <button class="slider-btn next" id="nextBtn" aria-label="Volgende foto">&#10095;</button>
+
+        <!-- Slides -->
+        <div class="slider-track" id="sliderTrack">
+          <div class="slide"><img src="assets/images/Foto1.png" alt="B-SAR inzet en training foto 1"></div>
+          <div class="slide"><img src="assets/images/Foto2.png" alt="B-SAR inzet en training foto 2"></div>
+          <div class="slide"><img src="assets/images/Foto3.png" alt="B-SAR inzet en training foto 3"></div>
+          <div class="slide"><img src="assets/images/Foto4.png" alt="B-SAR inzet en training foto 4"></div>
+          <div class="slide"><img src="assets/images/Foto5.png" alt="B-SAR inzet en training foto 5"></div>
+          <div class="slide"><img src="assets/images/Foto6.png" alt="B-SAR inzet en training foto 6"></div>
+          <div class="slide"><img src="assets/images/Foto7.png" alt="B-SAR inzet en training foto 7"></div>
+          <div class="slide"><img src="assets/images/Foto8.png" alt="B-SAR inzet en training foto 8"></div>
+          <div class="slide"><img src="assets/images/Foto9.png" alt="B-SAR inzet en training foto 9"></div>
+          <div class="slide"><img src="assets/images/Foto10.png" alt="B-SAR inzet en training foto 10"></div>
+          <div class="slide"><img src="assets/images/Foto11.png" alt="B-SAR inzet en training foto 11"></div>
+          <div class="slide"><img src="assets/images/Foto12.png" alt="B-SAR inzet en training foto 12"></div>
+          <div class="slide"><img src="assets/images/Foto13.png" alt="B-SAR inzet en training foto 13"></div>
+          <div class="slide"><img src="assets/images/Foto14.png" alt="B-SAR inzet en training foto 14"></div>
+        </div>
       </div>
+
+      <!-- Indicatiepuntjes onder de slider -->
+      <div class="slider-dots" id="sliderDots"></div>
+
     </div>
   </section>
 
@@ -139,19 +125,6 @@
   </div>
 </footer>
 
-<script>
-const toggle = document.getElementById('navToggle');
-const nav = document.querySelector('nav.main-nav');
-toggle.addEventListener('click', () => {
-  toggle.classList.toggle('open');
-  nav.classList.toggle('open');
-});
-document.addEventListener('click', (e) => {
-  if (!e.target.closest('header')) {
-    toggle.classList.remove('open');
-    nav.classList.remove('open');
-  }
-});
-</script>
+<script src="assets/script.js"></script>
 </body>
 </html>
