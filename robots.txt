@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /evenementen.html
 
 Sitemap: https://b-sar.be/sitemap.xml
