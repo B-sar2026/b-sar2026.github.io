@@ -577,7 +577,7 @@ section:last-of-type { border-bottom: none; }
    =========================================================== */
 .slider-container {
   position: relative;
-  max-width: 1100px; /* Groter gemaakt voor betere zichtbaarheid */
+  max-width: 1100px;
   margin: 0 auto;
   overflow: hidden;
   border: 1px solid var(--color-steel);
@@ -911,12 +911,13 @@ footer.site-footer {
   text-decoration: none;
 }
 .cta-number-item a:hover { text-decoration: underline; }
+
 /* ===========================================================
    CTA BAND & SOCIAL MEDIA UITLIJNING
    =========================================================== */
 .cta-band {
   display: flex;
-  align-items: flex-end; /* Lijnt alles onderaan uit op gelijke hoogte */
+  align-items: flex-end;
   justify-content: space-between;
   gap: 2rem;
   background: var(--color-panel);
@@ -947,7 +948,7 @@ footer.site-footer {
   display: flex;
   align-items: center;
   gap: 0.85rem;
-  height: 24px; /* Zorgt dat de hoogte van de icoon-rij exact klopt met de tekst */
+  height: 24px;
 }
 
 .social-icon-btn {
@@ -989,4 +990,34 @@ footer.site-footer {
     width: 100%;
     text-align: center;
   }
+}
+
+/* ===========================================================
+   HOVER EN KLIK EFFECTEN VOOR VERMISTE DIEREN LINKS
+   =========================================================== */
+#vermiste-dieren a {
+  color: var(--color-red);
+  text-decoration: underline;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+#vermiste-dieren a:hover {
+  color: #a00c24; /* Iets donkerdere rode tint bij hover */
+  transform: translateY(-1px); /* Subtiel lift-effect zoals de knoppen */
+}
+
+#vermiste-dieren a:hover svg {
+  transform: translate(2px, -2px); /* Laat het pijltje subtiel naar rechts-boven bewegen */
+  transition: transform 0.2s ease;
+}
+
+#vermiste-dieren a:active {
+  transform: translateY(1px); /* Klik-effect */
+}
+
+#vermiste-dieren svg {
+  transition: transform 0.2s ease;
 }
